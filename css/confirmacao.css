@@ -1,0 +1,29 @@
+.confirmacao-form {
+  background: #fdf8f0;
+  padding: 30px;
+  border: 2px solid #D4AF37;
+  border-radius: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.confirmacao-form label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+  color: #4B0082;
+}
+
+.confirmacao-form input,
+.confirmacao-form select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.confirmacao-form button {
+  margin-top: 20px;
+}

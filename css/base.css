@@ -1,0 +1,184 @@
+/* ===== Base do site ===== */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #fffaf0;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* Cabeçalho */
+header {
+  background: linear-gradient(90deg, #4B0082, #D4AF37);
+  color: white;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #D4AF37;
+  margin: 0;
+}
+
+.countdown {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Layout principal */
+.container {
+  display: flex;
+  flex: 1;
+  min-height: calc(100vh - 120px); /* ajusta considerando header+footer */
+}
+
+/* Menu lateral */
+nav {
+  width: 250px;
+  background: #fdf8f0;
+  border-right: 2px solid #D4AF37;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 80px; /* abaixo do header */
+  height: calc(100vh - 80px);
+  box-sizing: border-box;
+}
+
+nav h3 {
+  font-family: 'Playfair Display', serif;
+  color: #4B0082;
+  border-bottom: 2px solid #D4AF37;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 16px 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #4B0082;
+  font-weight: 700;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #D4AF37;
+}
+
+/* Conteúdo */
+main {
+  flex: 1;
+  padding: 20px 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Banner de história */
+.historia-banner {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.historia-banner img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  display: block;
+  margin: 0 auto;
+}
+
+/* Seções */
+section {
+  margin-bottom: 60px;
+}
+
+section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #4B0082;
+  border-bottom: 3px solid #D4AF37;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #fdf8f0;
+  font-size: 1rem;
+  color: #555;
+  border-top: 2px solid #D4AF37;
+  margin-top: auto;
+}
+
+/* Botão padrão */
+.rsvp-button {
+  display: inline-block;
+  background: linear-gradient(90deg, #4B0082, #D4AF37);
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+.rsvp-button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  nav {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 2px solid #D4AF37;
+    position: relative;
+    top: 0;
+  }
+  
+  main {
+    max-width: 100%;
+  }
+}
